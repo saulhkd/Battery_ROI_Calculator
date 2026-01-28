@@ -34,7 +34,7 @@ def simular_arbitraje_y_solar(datos_facturas, cap_bat=100, pot_bat=50, eficienci
             (df['hora_dia'] >= 17) & (df['hora_dia'] < 20),
             (df['hora_dia'] >= 20)
         ]
-        pesos = [0.4, 0.8, 2, 0.8, 1] 
+        pesos = [0.4, 0.8, 2, 0.8, 1.2] 
         df['perfil_base'] = np.select(condiciones, pesos)
         
         # Ajustamos al consumo real de la factura
@@ -47,7 +47,7 @@ def simular_arbitraje_y_solar(datos_facturas, cap_bat=100, pot_bat=50, eficienci
             np.sin((df['hora_dia'] - 7) * np.pi / 13),
             0
         )
-        # Ajustamos al excedente real de la factura
+        # Ajustar al excedente real de la factura
         factor_solar = mes['excedente_total_kwh'] / df['perfil_solar'].sum() if df['perfil_solar'].sum() > 0 else 0
         df['solar_disponible_kwh'] = df['perfil_solar'] * factor_solar
         
