@@ -13,6 +13,7 @@ def simular_arbitraje_y_solar(datos_facturas, cap_bat=100, pot_bat=50, eficienci
     print("-" * 60)
     
     resultados_mes = []
+    
     ahorro_total = 0
     
     for mes in datos_facturas:
@@ -33,7 +34,7 @@ def simular_arbitraje_y_solar(datos_facturas, cap_bat=100, pot_bat=50, eficienci
             (df['hora_dia'] >= 17) & (df['hora_dia'] < 20),
             (df['hora_dia'] >= 20)
         ]
-        pesos = [0.4, 0.8, 1.5, 0.8, 1.6] 
+        pesos = [0.4, 0.8, 2, 0.8, 1] 
         df['perfil_base'] = np.select(condiciones, pesos)
         
         # Ajustamos al consumo real de la factura
