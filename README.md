@@ -1,4 +1,4 @@
-🔋 Simulador de Rentabilidad de Baterías Industriales (Battery ROI Calculator)
+## 🔋 Simulador de Rentabilidad de Baterías Industriales (Battery ROI Calculator)
 Esta herramienta es un simulador avanzado desarrollado en Python diseñado para calcular el Retorno de Inversión (ROI) de instalaciones de almacenamiento de energía (baterías) en entornos industriales o comerciales.
 
 El proyecto nació como una herramienta comercial para demostrar la viabilidad de instalar baterías de 100kWh combinando dos estrategias fundamentales:
@@ -46,7 +46,7 @@ Ejecutar simulaciones por consola (generan gráficas .png en la carpeta /resulta
 
 Bash
 python arbitraje-y-solar.py
-# o
+o
 python main.py
 🐳 Instalación y Uso (Docker)
 Si prefieres aislar el entorno utilizando Docker:
@@ -68,8 +68,8 @@ docker run --rm -v $(pwd)/resultados:/app/resultados simulador-baterias
 
 💼 Caso de Uso (Argumentario Comercial)
 Este software permite desmentir simulaciones infladas de la competencia. Al ajustar la tabla de precios dentro de la aplicación (por ejemplo, bajando el precio Valle a 0.05 € para simular un contrato indexado), el simulador demuestra cómo una batería más económica y dimensionada correctamente (100kWh/50kW) puede ofrecer retornos de inversión de 6 a 7 años, superando ampliamente las propuestas de baterías sobredimensionadas que dependen de condiciones tarifarias ocultas para mostrar rentabilidad.
--------------------------------------------------------------------------------------------
-🔋 Industrial Battery ROI Simulator (Battery ROI Calculator)
+
+## 🔋 Industrial Battery ROI Simulator (Battery ROI Calculator)
 This tool is an advanced simulator developed in Python designed to calculate the Return on Investment (ROI) of energy storage installations (batteries) in industrial or commercial environments.
 
 The project was born as a commercial tool to demonstrate the viability of installing 100kWh batteries combining two fundamental strategies:
@@ -117,7 +117,7 @@ Run console simulations (generates .png graphs in the /resultados folder):
 
 Bash
 python arbitraje-y-solar.py
-# or
+or
 python main.py
 🐳 Installation and Usage (Docker)
 If you prefer to isolate the environment using Docker:
